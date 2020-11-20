@@ -20,3 +20,8 @@ insert into employee_payroll values
 
 /*UC4 Retrieving Data from table*/
 select * from employee_payroll
+
+/*UC5 Retrieve values based on conditions*/
+select salary from employee_payroll where name = 'Bill'
+select * from employee_payroll where start_date between CAST('2018-01-01' as date) AND SYSDATETIME()
+
