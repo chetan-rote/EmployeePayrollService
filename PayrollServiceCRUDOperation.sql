@@ -25,3 +25,8 @@ select * from employee_payroll
 select salary from employee_payroll where name = 'Bill'
 select * from employee_payroll where start_date between CAST('2018-01-01' as date) AND SYSDATETIME()
 
+/*UC6 Adding column and updating rows.*/
+Alter table employee_payroll add Gender char;
+
+Update employee_payroll set gender = 'M' where name = 'Bill' or name = 'Charlie';
+Update employee_payroll set gender = 'F' where name = 'Terissa';
