@@ -30,3 +30,10 @@ Alter table employee_payroll add Gender char;
 
 Update employee_payroll set gender = 'M' where name = 'Bill' or name = 'Charlie';
 Update employee_payroll set gender = 'F' where name = 'Terissa';
+
+/*UC7 Using aggregate functions on data*/
+select gender,SUM(salary) as sum from employee_payroll group by gender;
+select gender,AVG(salary) as avg from employee_payroll group by gender;
+select gender,MIN(salary) as min from employee_payroll group by gender;
+select gender,MAX(salary) as max from employee_payroll group by gender;
+select gender,COUNT(gender) as count from employee_payroll group by gender;
