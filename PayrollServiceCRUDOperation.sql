@@ -37,3 +37,9 @@ select gender,AVG(salary) as avg from employee_payroll group by gender;
 select gender,MIN(salary) as min from employee_payroll group by gender;
 select gender,MAX(salary) as max from employee_payroll group by gender;
 select gender,COUNT(gender) as count from employee_payroll group by gender;
+
+/*UC8 Adding More Columns to table*/
+Alter table Employee_Payroll Add Employee_Address varchar(200), Department Varchar(50), Phone_Number Varchar(12)
+Update employee_payroll set Employee_Address = 'Brooklyn', Department = 'Sales',Phone_Number = '888888888' where name = 'Bill'
+Update employee_payroll set Employee_Address = 'Boston', Department = 'Marketing',Phone_Number = '999999999' where name = 'Terissa'
+Update employee_payroll set Employee_Address = 'Arizona', Department = 'Finance',Phone_Number = '777777777'  where name = 'Charlie'
